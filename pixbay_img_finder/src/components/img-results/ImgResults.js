@@ -5,12 +5,12 @@ import GridListTile from "@material-ui/core/GridListTile";
 import GridListTileBar from "@material-ui/core/GridListTileBar";
 import IconButton from "@material-ui/core/IconButton";
 import ZoomInIcon from "@material-ui/icons/ZoomIn";
+import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
-import DialogTitle from "@material-ui/core/DialogTitle";
+import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
-import DialogActions from "@material-ui/core/DialogActions";
-import Button from "@material-ui/core/Button";
+import DialogTitle from "@material-ui/core/DialogTitle";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -49,21 +49,18 @@ const useStyles = makeStyles(theme => ({
  */
 function ImgResults(props) {
   const classes = useStyles();
-
   const [values, setOpen] = useState({
     open: false,
     currentImg: null
   });
 
-  const handleClickOpen = img => {
-    console.log(img);
+  const handleOpen = img => {
     setOpen({ open: true, currentImg: img });
   };
 
   const handleClose = () => {
-    setOpen({ open: false });
+    setOpen({ open: false, currentImg: null });
   };
-
   return (
     <div className={classes.root}>
       <GridList cols={3}>
@@ -80,7 +77,8 @@ function ImgResults(props) {
               actionIcon={
                 <IconButton
                   className={classes.icon}
-                  onClick={handleClickOpen(img)}
+                  onClick={() => handleOpen(img)}
+                  source={img}
                 >
                   <ZoomInIcon />
                 </IconButton>
@@ -103,6 +101,7 @@ function ImgResults(props) {
             <img
               src={values.currentImg ? values.currentImg.largeImageURL : ""}
               alt=""
+              width="100%"
             />
           </DialogContentText>
         </DialogContent>
