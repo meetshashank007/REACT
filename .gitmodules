@@ -7,3 +7,6 @@
 [submodule "react_tdd"]
 	path = react_tdd
 	url = /home/shashankshekhergupta/MEGA/Workspace/REACT/react_tdd
+[submodule "react_redux_demo"]
+	path = react_redux_demo
+	url = /home/shashankshekhergupta/MEGA/Workspace/REACT/react_redux_demo
