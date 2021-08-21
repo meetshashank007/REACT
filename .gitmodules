@@ -10,3 +10,6 @@
 [submodule "react_jotto_tdd"]
 	path = react_jotto_tdd
 	url = /home/shashankshekhergupta/MEGA/Workspace/REACT/react_jotto_tdd
+[submodule "react_redux_demo"]
+	path = react_redux_demo
+	url = /home/shashankshekhergupta/MEGA/Workspace/REACT/react_redux_demo
