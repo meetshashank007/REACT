@@ -7,3 +7,6 @@
 [submodule "react_tdd"]
 	path = react_tdd
 	url = /home/shashankshekhergupta/MEGA/Workspace/REACT/react_tdd
+[submodule "react_jotto_tdd"]
+	path = react_jotto_tdd
+	url = /home/shashankshekhergupta/MEGA/Workspace/REACT/react_jotto_tdd
